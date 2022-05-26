@@ -15,7 +15,5 @@ exports.creditCheck = function (str) {
     }
   }
   let res = arr.reduce((curr, pre) => curr + pre, 0);
-  return res % 10 === 0;
+  return res % 10 == 0 ? "The number is valid!" : "The number is invalid!";
 };
-
-console.log(this.creditCheck("5541808923795240"));
