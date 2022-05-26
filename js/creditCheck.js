@@ -14,7 +14,8 @@ exports.creditCheck = function (str) {
       arr[j] = +bigger[0] + +bigger[1];
     }
   }
-  return arr;
+  let res = arr.reduce((curr, pre) => curr + pre, 0);
+  return res % 10 === 0;
 };
 
 console.log(this.creditCheck("5541808923795240"));
