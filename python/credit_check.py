@@ -1,3 +1,4 @@
+import functools
 def credit_check(Str):
     arr = []
     Str = list(Str)
@@ -9,9 +10,7 @@ def credit_check(Str):
                 splitedNum = list(str(num))
                 num = int(splitedNum[0]) + int(splitedNum[1])
         arr.insert(0, num)
-    sum = 0
-    for item in arr:
-        sum += item
+    sum = functools.reduce(lambda total, curr : total + curr, arr)
     return "The number is valid!" if sum % 10 == 0 else "The number is invalid!"
 
 
