@@ -1,8 +1,17 @@
-def credit_check(str):
-    pass
+def credit_check(Str):
+    arr = []
+    Str = list(Str)
+    for i in range(len(Str)-1, -1, -1):
+        num = int(Str[i])
+        if i % 2 == 0:
+            num *= 2
+            if (len(str(num)) > 1):
+                splitedNum = list(str(num))
+                num = int(splitedNum[0]) + int(splitedNum[1])
+        arr.insert(0, num)
+    sum = 0
+    for item in arr:
+        sum += item
+    return "The number is valid!" if sum % 10 == 0 else "The number is invalid!"
 
-# Your Luhn Algorithm Here
-# Expected Output:
-# If it is valid, print "The number is valid!"
-# If it is invalid, print "The number is invalid!"
 
