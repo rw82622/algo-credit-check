@@ -1,11 +1,11 @@
-exports.creditCheck = function (str) {
+exports.creditCheck = function (Str) {
   let arr = [];
-  str = str.toString().split("").reverse();
-  for (let i in str) {
+  Str = Str.toString().split("").reverse();
+  for (let i in Str) {
     if (i % 2 !== 0) {
-      arr.push(+str[i] * 2);
+      arr.push(+Str[i] * 2);
     } else {
-      arr.push(+str[i]);
+      arr.push(+Str[i]);
     }
   }
   for (let j in arr) {
